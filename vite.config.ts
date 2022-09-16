@@ -8,7 +8,7 @@ export default defineConfig({
     build: {
         lib: {
             entry: path.resolve(__dirname, './src/export.ts'),
-            name: 'vue3-image-vue',
+            name: 'cloaks-mind',
             fileName: (format) => `build.${format}.ts`
         },
         rollupOptions: {
