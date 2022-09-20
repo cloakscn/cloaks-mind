@@ -1,8 +1,8 @@
-import MindMap from './mindMap'
+import {mindMapLayout as MindMap}  from './MindMapLayout'
 
-export const hierarchy = {
+export {
     // compactBox: require('./compact-box'),
     // dendrogram: require('./dendrogram'),
     // indented: require('./indented'),
-    mindMap: MindMap
+    MindMap
 };

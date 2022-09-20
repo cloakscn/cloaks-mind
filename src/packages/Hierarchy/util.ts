@@ -1,4 +1,4 @@
-import { assign } from "../Util";
+import { assign } from "@antv/util";
 
 const util = {
     assign: assign,

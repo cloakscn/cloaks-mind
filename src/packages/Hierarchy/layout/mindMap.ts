@@ -50,6 +50,7 @@ const DEFAULT_OPTIONS = {
     }
 };
 
+// todo 构造思维导图节点的宽高
 export function traverse(root: any, options: any) {
     options = util.assign({}, DEFAULT_OPTIONS, options);
     root.parent = {
@@ -90,4 +91,4 @@ export function traverse(root: any, options: any) {
 
     // third walk
     thirdWalk(root);
-};
+}

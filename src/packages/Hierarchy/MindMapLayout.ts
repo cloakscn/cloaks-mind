@@ -1,18 +1,19 @@
-import {Layout as TreeLayout} from './layout/base';
+import {Layout} from './layout/Layout';
 import {traverse as MindMap} from './layout/mindmap';
 import {func as doTreeLayout} from './layout/do-layout';
 import util from './util';
 
-class MindMapLayout extends TreeLayout {
+class MindMapLayout extends Layout {
+
     execute() {
-        return doTreeLayout(super.rootNode, super.options, MindMap);
+        return doTreeLayout(this.rootNode, this.options, MindMap);
     }
 }
 
 const DEFAULT_OPTIONS = {};
 
-export default function mindMapLayout(root:any, options:any) {
+export function mindMapLayout(root: any, options: any) {
+    // todo: 动态拼接操作选项
     options = util.assign({}, DEFAULT_OPTIONS, options);
     return new MindMapLayout(root, options).execute();
 }
-

@@ -1,6 +1,7 @@
 import {hierarchy} from './hierarchy';
+import {Node} from "./Node";
 
-export function func(root:any, options:any) {
+export function func(root:Node, options:any) {
     // separate into left and right trees
     const left = hierarchy(root.data, options, true); // root only
     const right = hierarchy(root.data, options, true); // root only
@@ -23,7 +24,7 @@ export function func(root:any, options:any) {
             left.children.push(child);
         }
     }
-    left.eachNode((node:any) => {
+    left.eachNode((node:Node) => {
         if (!node.isRoot()) {
             node.side = 'left';
         }
@@ -37,4 +38,4 @@ export function func(root:any, options:any) {
         left,
         right
     };
-};
+}
